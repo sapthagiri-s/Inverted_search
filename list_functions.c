@@ -97,7 +97,7 @@ void delete_file(list **head, char *file)
 {
     if (*head == NULL) // Check if the list is empty
     {
-        printf("List Empty: "); // Print message
+        //printf("List Empty: "); // Print message
         return; // Return
     }
     list *temp = *head; // Temporary pointer to traverse the list

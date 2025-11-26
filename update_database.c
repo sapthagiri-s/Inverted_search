@@ -15,7 +15,7 @@ int update_database(hash arr[], list **head)
 
     /* Validate file name */
     char *sub = strstr(file, ext); // Check if the file name contains the expected extension
-    if (sub != NULL && strcmp(sub, ext) != 0) // If the extension is invalid
+    if (sub != NULL && (strcmp(sub, ext)) != 0) // If the extension is invalid
     {
         printf(RED "Info: Enter a valid file name\n" RESET); // Print error message
         return update_database(arr, head); // Recursively call the function to re-enter file name
@@ -155,9 +155,7 @@ int update_database(hash arr[], list **head)
         }
     }
 
-    create_database(arr, head); // Create the database
-    display_database(arr); // Display the database
-
+    
     char ch; // Variable to store user choice
     printf(RED "Do you want to update the database ?(Y/y) : " RESET); // Prompt user to update the database
     scanf(" %c", &ch); // Read user choice
